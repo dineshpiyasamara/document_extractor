@@ -47,7 +47,7 @@ def get_args():
         "--checkpoint",
         "-c",
         type=Path,
-        default=None,
+        default='model',
         help="Path to checkpoint directory.",
     )
     parser.add_argument(
@@ -57,7 +57,7 @@ def get_args():
         default='0.1.0-small',
         help=f"Model tag to use.",
     )
-    parser.add_argument("--out", "-o", type=Path, help="Output directory.")
+    parser.add_argument("--out", "-o", type=Path, help="Output directory.", default="output",)
     parser.add_argument(
         "--recompute",
         action="store_true",
